@@ -1,33 +1,24 @@
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+#include <stdio.h>
+#include <stdlib.h>
 
-# Precompiled Headers
-*.gch
-*.pch
+int main()
+{
+    int numbers,i,numbers2,snumber;
+    printf("How many numbers do you want to enter? :");
+    scanf("%d",&numbers);
+    snumber=numbers;
+    for(i=1;i<numbers;i++)
+    {
+        printf("Enter the number:");
+        scanf("%d",&numbers2);
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+        if(numbers2<snumber)
+        {
+            snumber=numbers2;
+        }
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+    }
+        printf("smallest number : %d",snumber);
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
+}
+   
